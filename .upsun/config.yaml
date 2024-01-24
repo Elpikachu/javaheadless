@@ -35,7 +35,7 @@ applications:
     type: "nodejs:20"
 
     container_profile: HIGH_MEMORY
-    
+
     variables:
       env:
         NODE_OPTIONS: '--max-old-space-size=2048'
@@ -64,8 +64,6 @@ applications:
       build: |
         set -e
         npm install
-      post_deploy: |
-        set -e
         npm run build
 
 services:
