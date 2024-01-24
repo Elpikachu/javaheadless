@@ -2,7 +2,7 @@ applications:
   backend:
     source:
       root: "/backend"
-      type: "java:17"
+    type: "java:17"
 
     relationships: 
       database: "mariadb:mysql"
@@ -28,7 +28,7 @@ applications:
   frontend:
     source:
       root: "/frontend"
-    type: "node:21"
+    type: "node:20"
 
     variables:
       env:
