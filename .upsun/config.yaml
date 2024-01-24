@@ -1,0 +1,71 @@
+applications:
+  backend:
+    source:
+      root: "/backend"
+      type: "java:17"
+
+    relationships: 
+      database: "mariadb:mysql"
+
+    web:
+      commands:
+        start: "java -jar $JAVA_OPTS target/demo-0.0.1-SNAPSHOT.jar --server.port=$PORT; sleep 60"
+      upstream:
+        socket_family: tcp
+      locations:
+        "/":
+          passthru: true
+    
+    variables:
+      env:
+        MAVEN_VERSION: 3.9.6
+
+    hooks:
+      build: |
+        set -e
+        mvn clean package
+
+  frontend:
+    source:
+      root: "/frontend"
+    type: "node:21"
+
+    variables:
+      env:
+        NODE_OPTIONS: '--max-old-space-size=2048'
+
+    web:
+      commands:
+        start: "npm start -- --port $PORT"
+      upstream:
+        socket_family: tcp
+      locations:
+        "/":
+          root: "build"
+          index: ["index.html"]
+          scripts: false
+          allow: true
+        
+    build:
+      flavor: none
+
+    hooks:
+      build: |
+        set -e
+        npm install
+        npm run build
+
+services:
+  mariadb:
+    type: mariadb:11.0
+
+routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "frontend:http"
+  "https://www.{default}":
+    type: redirect
+    to: "https://{default}/"
+  "https://api.{default}/":
+    type: upstream
+    upstream: "backend:http"
