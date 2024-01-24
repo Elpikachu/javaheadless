@@ -62,7 +62,7 @@ applications:
       build: |
         set -e
         npm install
-      post-deploy: |
+      post_deploy: |
         set -e
         npm run build
 
