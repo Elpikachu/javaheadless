@@ -7,3 +7,5 @@ export SPRING_DATASOURCE_USERNAME=`echo $PLATFORM_RELATIONSHIPS|base64 -d|jq -r 
 export SPRING_DATASOURCE_PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|jq -r ".database[0].password"`
 export FRONTEND_URL=$(echo $PLATFORM_ROUTES | base64 -d | jq -r 'to_entries[] | select(.value.id=="frontend") | .key' | sed 's,https://,, ; s,/$,,')
 export BACKEND_URL=$(echo $PLATFORM_ROUTES | base64 -d | jq -r 'to_entries[] | select(.value.id=="backend") | .key' | sed 's,/$,,')
+export WRITER_CSV_PATH_FILE="/app/src/main/java/com/demo/Writers/writers.csv"
+export CONTENT_CSV_PATH_FILE="/app/src/main/java/com/demo/Content/content.csv"
