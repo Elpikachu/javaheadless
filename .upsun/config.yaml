@@ -67,9 +67,11 @@ routes:
   "https://{default}/":
     type: upstream
     upstream: "frontend:http"
+    id: frontend
   "https://www.{default}":
     type: redirect
     to: "https://{default}/"
-  "https://api.{default}/":
+  "https://backend.{default}/":
     type: upstream
     upstream: "backend:http"
+    id: backend
