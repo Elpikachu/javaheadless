@@ -38,6 +38,11 @@ applications:
       env:
         NODE_OPTIONS: '--max-old-space-size=2048'
 
+    mounts:
+      'build':
+          source: storage
+          source_path: build
+
     web:
       commands:
         start: "npm start -- --port $PORT"
@@ -57,6 +62,8 @@ applications:
       build: |
         set -e
         npm install
+      post-deploy: |
+        set -e
         npm run build
 
 services:
