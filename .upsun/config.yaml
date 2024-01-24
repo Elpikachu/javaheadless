@@ -61,7 +61,7 @@ applications:
 
 services:
   mariadb:
-    type: mariadb:11.0
+    type: mysql:11.0
 
 routes:
   "https://{default}/":
