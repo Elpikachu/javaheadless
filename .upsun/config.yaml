@@ -5,7 +5,7 @@ applications:
     type: "java:17"
 
     relationships: 
-      database: "mariadb:mysql"
+      database: "mysql:mysql"
 
     web:
       commands:
@@ -60,7 +60,7 @@ applications:
         npm run build
 
 services:
-  mariadb:
+  mysql:
     type: mysql:11.0
 
 routes:
