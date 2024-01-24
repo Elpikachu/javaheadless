@@ -1,0 +1,8 @@
+### VS Code ###
+.vscode/
+
+### Java General ###
+/src/main/target/
+
+### Other ####
+*.sql

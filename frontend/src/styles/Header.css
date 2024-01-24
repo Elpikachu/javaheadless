@@ -1,0 +1,31 @@
+.header-container {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #ff6600;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid #ff6600;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px; /* Set your desired font size */
+    margin-left: 50px;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

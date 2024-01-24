@@ -1,0 +1,4 @@
+id,title,writerid,summary,writername,article,datecreate,category,imglink
+1,Example content for a demo,1,Example summary for a demo,Demo,Example article for a demo. More content can be added.,2023-06-23,Demo,container1.jpeg
+2,Another example of demo content,1,This is yet another summary,Demo,Example article for a demo. More content can be added,2023-06-24,Demo,container2.jpeg
+3,Last example of demo content,1,This is the last summary,Demo,Example article for a demo. More content can be added,2023-06-25,Demo,container3.jpeg

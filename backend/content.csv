@@ -1,0 +1,4 @@
+id,title,writerid,summary,writername,article,datecreate,category,imglink
+1,Example content for a demo,Example summary for a demo,Demo,Example article for a demo. More content can be added.,2023-06-23,Demo,https://platform.sh/platform-logos/full/black/Platformsh_logo_black.jpg
+2,Another example of demo content,This is yet another summary,Demo,Example article for a demo. More content can be added,2023-06-24,Demo,https://platform.sh/platform-logos/full/black/Platformsh_logo_black.jpg
+3,Last example of demo content,This is the last summary,Demo,Example article for a demo. More content can be added,2023-06-25,Demo,https://platform.sh/platform-logos/full/black/Platformsh_logo_black.jpg
