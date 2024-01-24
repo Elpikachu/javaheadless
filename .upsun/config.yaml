@@ -23,6 +23,7 @@ applications:
     hooks:
       build: |
         set -e
+        mvn --version
         mvn clean package
 
   frontend:
