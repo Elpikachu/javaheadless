@@ -70,7 +70,7 @@ applications:
         touch jsonconf/routes.json
         : > jsonconf/routes.json
         BACKEND_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id=="backend") | .key')
-        echo -n {"url": "$BACKEND_URL"} > jsonconf/routes.json
+        echo -n {\"url\": \"$BACKEND_URL\"} > jsonconf/routes.json
 
 
 services:
