@@ -11,7 +11,8 @@ async function fetchJson(url) {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const json = await response.json();
+    const responseText = await response.text();
+    const json = JSON.parse(JSON.stringify(responseText))
     return json;
 }
 

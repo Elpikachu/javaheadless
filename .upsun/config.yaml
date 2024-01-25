@@ -69,7 +69,7 @@ applications:
       deploy: |
         touch jsonconf/routes.json
         : > jsonconf/routes.json
-        echo "{'url': 'http://example.com'}" > jsonconf/routes.json
+        echo -n '{"url": "http://example.com"}' > jsonconf/routes.json
 
 
 services:
