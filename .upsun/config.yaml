@@ -15,8 +15,6 @@ applications:
       locations:
         "/":
           passthru: true
-        "/jsonconf":
-          root: "jsonconf"
     
     variables:
       env:
@@ -57,6 +55,8 @@ applications:
           index: ["index.html"]
           scripts: false
           allow: true
+        "/jsonconf":
+          root: "jsonconf"
         
     build:
       flavor: none
