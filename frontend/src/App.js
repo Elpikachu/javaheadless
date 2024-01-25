@@ -1,12 +1,10 @@
 //import './App.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './structure/Header';
 import Footer from './structure/Footer';
 import Blog from './Blog';
 import Content from './Content';
-
-import React, { useState, useEffect } from 'react';
 
 async function fetchJson(url) {
     const response = await fetch(url);
