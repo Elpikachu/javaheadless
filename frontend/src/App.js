@@ -23,7 +23,7 @@ function App() {
       const fetchData = async () => {
           if (!data) {
               try {
-                  const fetchedData = await fetchJson('jsonconf/routes.json');
+                  const fetchedData = await fetchJson('/jsonconf/routes.json');
                   setData(fetchedData);
                   localStorage.setItem('apiURL', fetchedData.url);
               } catch (error) {
