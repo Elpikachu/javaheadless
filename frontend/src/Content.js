@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './styles/Content.css'
 
-const endpoint = "/api/content/getbyid/";
-const reqUrl = `${process.env.REACT_APP_API_URL}${endpoint}`;
+const endpoint = "api/content/getbyid/";
+const reqUrl = `${localStorage.getItem('apiURL')}${endpoint}`;
 
 const Content = () => {
     const { id } = useParams();

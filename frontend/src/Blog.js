@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './styles/Blog.css';
 
-const endpoint = "/api/content/all";
-const reqUrl = `${process.env.REACT_APP_API_URL}${endpoint}`;
+const endpoint = "api/content/all";
+const reqUrl = `${localStorage.getItem('apiURL')}${endpoint}`;
 
 const Blog = () => {
     const [content, setContent] = useState([]);
