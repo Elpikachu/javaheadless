@@ -29,7 +29,7 @@ const Blog = () => {
                         <div className="content-item" key={item.contentid}>
                             {item.contentImglink && (
                                 <img
-                                    src={`${process.env.REACT_APP_API_URL}/api/images/${item.contentImglink}`}
+                                    src={`${localStorage.getItem('apiURL')}/api/images/${item.contentImglink}`}
                                     alt={item.contenttitle}
                                     className="content-image"
                                 />

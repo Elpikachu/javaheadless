@@ -31,7 +31,7 @@ const Content = () => {
         <div className="content-container">
             <div className='content-header'>
                 <h1 className="content-title">{content.contenttitle}</h1>
-                {content.contentImglink && <img src={`${process.env.REACT_APP_API_URL}/api/images/${content.contentImglink}`} alt="Content" className="contentimg" />}
+                {content.contentImglink && <img src={`${localStorage.getItem('apiURL')}/api/images/${content.contentImglink}`} alt="Content" className="contentimg" />}
             </div>
 
             <div className='content-main'>
