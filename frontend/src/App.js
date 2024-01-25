@@ -12,12 +12,12 @@ async function fetchJson(url) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     const responseText = await response.text();
-    const json = JSON.parse(JSON.stringify(responseText))
+    const json = JSON.parse(responseText)
     return json;
 }
 
 function App() {
-  const [data, setData] = useState(JSON.parse(localStorage.getItem('myData')));
+  const [data, setData] = useState(localStorage.getItem('siteUrl'));
 
   useEffect(() => {
       const fetchData = async () => {
@@ -25,7 +25,7 @@ function App() {
               try {
                   const fetchedData = await fetchJson('jsonconf/routes.json');
                   setData(fetchedData);
-                  localStorage.setItem('myData', JSON.stringify(fetchedData));
+                  localStorage.setItem('siteURL', fetchedData.url);
               } catch (error) {
                   console.error(error);
               }
