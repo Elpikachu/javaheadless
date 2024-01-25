@@ -17,7 +17,7 @@ async function fetchJson(url) {
 }
 
 function App() {
-  const [data, setData] = useState(localStorage.getItem('siteUrl'));
+  const [data, setData] = useState(localStorage.getItem('apiURL'));
 
   useEffect(() => {
       const fetchData = async () => {
@@ -25,7 +25,7 @@ function App() {
               try {
                   const fetchedData = await fetchJson('jsonconf/routes.json');
                   setData(fetchedData);
-                  localStorage.setItem('siteURL', fetchedData.url);
+                  localStorage.setItem('apiURL', fetchedData.url);
               } catch (error) {
                   console.error(error);
               }
@@ -33,7 +33,7 @@ function App() {
       };
 
       fetchData();
-  }, [data]); // Effect depends on the 'data' state
+  }, [data]);
 
   return (
     <Router>
