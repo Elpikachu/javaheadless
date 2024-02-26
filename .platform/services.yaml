@@ -1,0 +1,2 @@
+mariadb:
+  type: mariadb:11.2
