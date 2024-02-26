@@ -19,9 +19,6 @@ hooks:
 
 web:
     commands:
-        start: java -jar $JAVA_OPTS target/demo-0.0.1-SNAPSHOT.jar --server.port=$PORT
-web:
-    commands:
       start: "java -jar $JAVA_OPTS target/demo-0.0.1-SNAPSHOT.jar --server.port=$PORT; sleep 60"
     upstream:
       socket_family: tcp
