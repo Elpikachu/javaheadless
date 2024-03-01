@@ -5,6 +5,10 @@
 - NodeJs 20 for the frontend
 - Mariadb 11.2 as a database service
 
+## Projects
+- Platform.sh: https://console.platform.sh/solutions/iw5anthvyckli
+- Upsun: https://console.upsun.com/solutions/lydmjrme2cfb6
+
 ### Backend
 It's a Spring boot application used to provide an API.
 
@@ -26,3 +30,6 @@ In order to work properply independing of the environment used, we are using a .
 
 ### Local build
 In order to get the application working locally, you can use the docker-composer file included to get the DB service running and will need to update the .environment files to reflect your local environment.
+
+### Contribution
+- Maintainer: @julien.khamis
